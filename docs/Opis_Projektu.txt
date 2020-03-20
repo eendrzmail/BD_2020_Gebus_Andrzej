@@ -1,3 +1,5 @@
-Plik erd.png przedstawia diagram erd bazy danych którą zamierzamy utworzyć.
+Projekt ma na celu utworzenie aplikacji do obsługi biblioteki.
+
+Plik erd.png przedstawia diagram erd bazy danych, którą zamierzamy utworzyć.
 
 Do stworzenia warstwy GUI zamierzamy użyć języków php oraz javascript
