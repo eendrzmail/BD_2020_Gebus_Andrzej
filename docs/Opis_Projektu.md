@@ -7,7 +7,7 @@ Zależnie od nadanych uprawnień pracownicy będą mieli dostęp do osobnej form
 Możliwość ta pojawi się po zalogowaniu się pracownika.Osoby posiadające najwyższe
 Uprawnienia(zarządcy filii) będą uprawnieni do zmiany kadr.
 
-# Założenia bazy danych:
+### Założenia bazy danych:
 
 Książka:
   - może mieć kilku autorów (tabela łącząca)
