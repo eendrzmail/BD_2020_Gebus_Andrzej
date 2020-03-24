@@ -16,12 +16,12 @@ Książka:
   - jest przypisana do danej filii
 
 Wypożyczenia:
-  • Podczas wypożyczenia do bazy zapisywane są dane takie jak:
+  - Podczas wypożyczenia do bazy zapisywane są dane takie jak:
     - wypożyczany egzemplarz
     - czytelnik
     - obsługujący pracownik
     - filia w której zostaje wypożyczona książka
-  • Pracownik filii może na życzenie klienta prolongować daną książkę po jej wypożyczeniu na kolejne 14dni
+  - Pracownik filii może na życzenie klienta prolongować daną książkę po jej wypożyczeniu na kolejne 14dni
   
 Filie:
   - każda filia ma swojego zarządcę, który jest wybierany spośród pracowników danej filii
