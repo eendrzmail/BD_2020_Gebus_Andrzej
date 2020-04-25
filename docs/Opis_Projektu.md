@@ -32,5 +32,6 @@ W pl/sql zamierzam zaprogramować takie rzeczy jak:
   - generowanie loginu pracownika na podstawie jego danych osobowych
   - Obliczanie daty oddania na podstawie daty wypozyczenia oraz liczby prolongacji
   - Tworzenie top książek pod względem oceny oraz roku ich wydania
+  - Analiza zarobków pracownikóa (mediany,średnie)
   
 
