@@ -1,32 +1,36 @@
 Projekt ma na celu utworzenie aplikacji do obsługi biblioteki.
 
-Plik erd.png przedstawia diagram erd bazy danych, którą zamierzamy utworzyć.
+Plik erd.jpeg przedstawia diagram erd bazy danych, którą zamierzam utworzyć.
 
-Do stworzenia warstwy GUI zamierzamy użyć języków php oraz javascript.
-Zależnie od nadanych uprawnień pracownicy będą mieli dostęp do osobnej formy strony zawierającej CMS.
-Możliwość ta pojawi się po zalogowaniu się pracownika.Osoby posiadające najwyższe
-Uprawnienia(zarządcy filii) będą uprawnieni do zmiany kadr.
+Projekt zamierzam stworzyć korzystając z:
+- Angular (frontend)
+- PHP (proste API jako backend)
+- OracleDB (postawione w kontenerze wirtualnym dockera)
 
 ### Założenia bazy danych:
 
 Książka:
   - może mieć kilku autorów (tabela łącząca)
-  - może mieć tylko jedno wydawnictwo
+  - może mieć kilka kategorii
+  - może mieć tylko jedno wydawnictwo (lub wcale)
   - może istnieć wiele egzamplarzy jednej książki
-  - jest przypisana do danej filii
 
 Wypożyczenia:
   - Podczas wypożyczenia do bazy zapisywane są dane takie jak:
     - wypożyczany egzemplarz
     - czytelnik
     - obsługujący pracownik
-    - filia w której zostaje wypożyczona książka
+    - data wypożyczenia
   - Pracownik filii może na życzenie klienta prolongować daną książkę po jej wypożyczeniu na kolejne 14dni
   
-Filie:
-  - każda filia ma swojego zarządcę, który jest wybierany spośród pracowników danej filii
-  
 Pracownicy:
-  - każdy pracownik jest przypisany do jakiejś filii
+  - każdy pracownik ma login oraz hasło którym loguje się do systemu. Po zalogowaniu może dodawać oraz edytować wypozyczenia
+  
+## PL/SQL
+
+W pl/sql zamierzam zaprogramować takie rzeczy jak:
+  - generowanie loginu pracownika na podstawie jego danych osobowych
+  - Obliczanie daty oddania na podstawie daty wypozyczenia oraz liczby prolongacji
+  - Tworzenie top książek pod względem oceny oraz roku ich wydania
   
 
