@@ -4,7 +4,7 @@ Plik erd.jpeg przedstawia diagram erd bazy danych, którą zamierzam utworzyć.
 
 Projekt zamierzam stworzyć korzystając z:
 - Angular (frontend)
-- PHP (proste API jako backend)
+- PHP (backend php łączące się z oracledb i wystawiające dane na zewnątrz w formie prostego rest API)
 - OracleDB (postawione w kontenerze wirtualnym dockera)
 
 ### Założenia bazy danych:
