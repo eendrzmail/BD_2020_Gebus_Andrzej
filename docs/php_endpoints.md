@@ -68,6 +68,11 @@ Poszczególne endpointy przyjmują określone parametry http oraz na ich podstaw
   - id :zwraca autora o podanym id
   - id_ksiazki :zwraca wszystkich autorów danej książki
   - q :zwraca wszystkich autorów o imieniu lub nazwisku zgodnym z ciągiem znaków
+#### - zapytania POST
+  - action :wymagany parametr decydujący o następnym kroku:
+    - 'insert':
+      - imie
+      - nazwisko : obydwa wymagane, wstawia autora i podanym imieniu i nazwisku
   
   
 ### localhost/api/kategorie.php
@@ -75,6 +80,10 @@ Poszczególne endpointy przyjmują określone parametry http oraz na ich podstaw
   - id :zwraca kategorię o podanym id
   - id_ksiazki :zwraca wszystkie kategorie danej książki
   - q :zwraca wszystkie kategorie zgodnye z ciągiem znaków
+#### - zapytania POST
+  - action :wymagany parametr decydujący o następnym kroku:
+    - 'insert':
+      - nazwa : wstawia kategorię o podanej nazwie
 
 ### localhost/api/wydawnictwa.php
 #### - zapytania GET
