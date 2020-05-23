@@ -53,6 +53,15 @@ Poszczególne endpointy przyjmują określone parametry http oraz na ich podstaw
 #### - zapytania GET
   - id :zwraca ksiazke o podanym id
   - q :zwraca wszystkie ksiazki zgodne z ciągiem znaków
+#### - zapytania POST
+  - action :wymagany parametr decydujący o następnym kroku:
+    - 'insert':
+      - tytul
+      - opis
+      - ocena
+      - rok_wydania
+      - id_wydawnictwa :wszystkie powyższe parametry wymagane, dodaje do bazy danych nową książkę
+      - img_url : niewymagany, podany z poprzedmini dodaje książkę z adresem url do obrazka
 
 ### localhost/api/autorzy.php
 #### - zapytania GET
