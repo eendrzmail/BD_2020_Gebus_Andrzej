@@ -89,6 +89,10 @@ Poszczególne endpointy przyjmują określone parametry http oraz na ich podstaw
 #### - zapytania GET
   - id :zwraca wydawnictwo o podanym id
   - q :zwraca wszystkie wydawnictwa zgodnye z ciągiem znaków
+#### - zapytania POST
+  - action :wymagany parametr decydujący o następnym kroku:
+    - 'insert':
+      - nazwa : wstawia wydawnictwo o podanej nazwie
 
 
 
