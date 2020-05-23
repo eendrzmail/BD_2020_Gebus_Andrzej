@@ -30,6 +30,13 @@ Poszczególne endpointy przyjmują określone parametry http oraz na ich podstaw
 #### - zapytania GET
   - id :zwraca czytelnika o podanym id
   - q :zwraca wszystkich czytelników o imieniu lub nazwisku zgodnym z ciągiem znaków
+#### - zapytania POST
+  - action :wymagany parametr decydujący o następnym kroku:
+    - 'insert':
+      - imie
+      - nazwisko
+      - telefon
+      - email : wszystkie wymagane, wstawia czytelnika do bazy danych
   
 ### localhost/api/login.php
 #### - zapytania GET
