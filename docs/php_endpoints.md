@@ -23,6 +23,13 @@ Poszczególne endpointy przyjmują określone parametry http oraz na ich podstaw
   - id :zwraca pracownika o podanym id
   - login :zwraca pracownika o podanym loginie
   - q :zwraca wszystkie pracowników o imieniu lub nazwisku zgodnym z ciągiem znaków
+#### - zapytania POST
+  - action :wymagany parametr decydujący o następnym kroku:
+    - 'insert':
+      - imie
+      - nazwisko
+      - haslo
+      - wyplata : Wszystkie wymagane, wstawia pracownika o podanych parametrach oraz generuje mu login.
   
 
 
