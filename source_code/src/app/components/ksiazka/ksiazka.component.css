@@ -65,6 +65,11 @@
 .kategorie h5{
     margin:0;
 }
+.bookgrid button{
+    width:90%;
+    height:90%;
+}
+
 
 
 .egzemplarze{

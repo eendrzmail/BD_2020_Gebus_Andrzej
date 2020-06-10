@@ -108,7 +108,7 @@
                 <div class="wyd">
                     <div>
                         <h3>Kategorie:</h3>
-                        <div *ngFor="let kategoria of this.book.kategorie">
+                        <div *ngFor="let kategoria of this.book.kategorie" style="width:100%">
                             {{kategoria.nazwa}}
                             <button mat-raised-button (click)="rem_kat(kategoria)">
                                 Usuń

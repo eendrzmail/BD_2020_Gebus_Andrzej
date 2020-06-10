@@ -38,7 +38,7 @@ header("Access-Control-Allow-Origin: *");
     // dla wyszukiwania 
     else if (isset($_GET['q'])){
         $return=array();
-        $q = "select * from ksiazki where upper(tytul) like '%".strtoupper($_GET['q'])."%'";
+        $q = "select * from ksiazki where upper(tytul) like upper('%".strtoupper($_GET['q'])."%')";
         //echo $q;    
 
         if ($conn){
