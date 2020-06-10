@@ -1,0 +1,64 @@
+<div class="container">
+    <div *ngIf="this.error==true" style="color:white;background-color:red;height:30px;">
+        Błąd danych
+    </div>
+    <div *ngIf="this.loginservice.user!=null" class="cont">
+        
+        <table>
+            <tr>
+                <td>
+                    Imię
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Imię</mat-label>
+                        <input matInput [(ngModel)]="imie">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nazwisko
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Nazwisko</mat-label>
+                        <input matInput [(ngModel)]="nazwisko">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Telefon
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Telefon</mat-label>
+                        <input matInput [(ngModel)]="telefon">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    E-mail
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Email</mat-label>
+                        <input matInput [(ngModel)]="email">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button mat-raised-button color="accent" (click)="send()">
+                        Wyślij
+                    </button>
+
+                </td>
+            </tr>
+        </table>
+
+            
+    </div>
+</div>

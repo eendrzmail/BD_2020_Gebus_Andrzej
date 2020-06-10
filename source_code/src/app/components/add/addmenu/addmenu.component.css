@@ -1,0 +1,29 @@
+.container{
+    width:95%;
+    min-height:500px;
+    background-color:rgba(5, 5, 5, 0.7);
+    margin:auto;
+    position: relative;
+    padding-top:100px;
+}
+.cont{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.cont a{
+    text-decoration: none;
+    width:200px;
+    height:100px;
+    background: linear-gradient(rgb(0, 106, 133),rgb(0, 37, 71));
+    color:black;
+    font-weight: bold;
+    text-align:center;
+    line-height:100px;
+    transition-duration: .1s;
+}
+.cont a:hover{
+    background: linear-gradient(rgb(0, 37, 71),rgb(0, 106, 133));
+    color:white;
+}

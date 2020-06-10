@@ -1,0 +1,84 @@
+<div class="container">
+    <div *ngIf="this.loginservice.user.login=='root'" class="cont">
+        <h2>Informacje o zarobkach:</h2>
+        <table *ngIf="this.zarobki!=null">
+            <tr>
+                <th>
+                    Łącznie pensje:
+                </th>
+                <td>
+                    {{this.zarobki.suma}}zł
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Srednia zarobków:
+                </th>
+                <td>
+                    {{this.zarobki.avg}}zł
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Mediana zarobków:
+                </th>
+                <td>
+                    {{this.zarobki.mediana}}zł
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Odchylenie standardowe:
+                </th>
+                <td>
+                    {{+this.zarobki.odchylenie | number: '1.2-2'}}zł
+                </td>
+            </tr>
+        </table>
+        <h2>Pracownicy:</h2>
+
+        <table>
+            <tr>
+                <th>
+                    Imię
+                </th>
+                <th>
+                    Nazwisko
+                </th>
+                <th>
+                    Login
+                </th>
+                <th>
+                    Wypłata
+                </th>
+            </tr>
+        
+        <ng-container *ngIf="pracownicy!=null" class="pracownicy">
+            <tr *ngFor="let item of pracownicy">
+                <td>
+                    {{item.imie}} 
+                </td>
+                <td>
+                    {{item.nazwisko}}
+                </td>
+                <td>
+                    {{item.login}}
+                </td>
+                <td>
+                    {{item.wyplata}}
+                </td>
+                
+            </tr>
+        </ng-container>
+            <tr>
+                <td colspan="4">
+                    <button mat-raised-button routerLink="/add/pracownik">
+                        Dodaj Pracownika
+                    </button>
+                </td>
+            </tr>
+        
+        </table>
+            
+    </div>
+</div>

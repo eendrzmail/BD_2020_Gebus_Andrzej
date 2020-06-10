@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="searchcontainer">
+        <input class="search" [(ngModel)]="query" (change)="search()">
+        <button (click)="search()">Szukaj</button>
+    </div>
+
+    <!--<mat-slider min="1" max="100" step="1" value="1"></mat-slider>-->
+
+    <div class="top" *ngIf="this.books==null" >
+        <h1>Top książek</h1>
+        <div class="searchresults">
+            <div *ngFor="let item of this.topbooks" class="bookgrid">
+
+                <figure *ngIf="item.img_url!=null" class="image">
+                    <img src="{{item.img_url}}">
+                </figure>
+
+                <h2 class="tytul">{{item.tytul}}</h2>
+
+                <div class="autorzy">
+                    <a *ngFor="let autor of item.autorzy">
+                        {{autor.imie}} {{autor.nazwisko}}
+                    </a>    
+                </div>
+
+                <h5 class="wyd">{{item.wydawnictwo.nazwa}}</h5>
+                <h5 class="ocena">Ocena {{item.ocena}}</h5>
+                <h5 class="rok">Rok wydania {{item.rok_wydania}}</h5>
+
+                <p class="opis">
+                    {{item.opis}}
+                </p>
+
+                <a routerLink="/ksiazka/{{item.id_ksiazki}}" class="wypozycz">
+                    <button mat-raised-button color="primary">Egzemplarze</button>
+                </a>
+                <a class="edytuj" routerLink="/edit/book/{{item.id_ksiazki}}">
+                    <button mat-raised-button color="accent" *ngIf="this.loginservice.user!=null">Edytuj</button>
+                </a>
+                
+                
+
+
+            </div>
+        </div>
+    </div>
+    
+    <div *ngIf="this.books!=null" class="results">
+        <h1>Wyniki wyszukiwania:</h1>
+        <div class="searchresults">
+            <div *ngFor="let item of this.books" class="bookgrid">
+
+                <figure *ngIf="item.img_url!=null" class="image">
+                    <img src="{{item.img_url}}">
+                </figure>
+
+                <h2 class="tytul">{{item.tytul}}</h2>
+
+                <div class="autorzy">
+                    <a *ngFor="let autor of item.autorzy">
+                        {{autor.imie}} {{autor.nazwisko}}
+                    </a>    
+                </div>
+
+                <h5 class="wyd">{{item.wydawnictwo.nazwa}}</h5>
+                <h5 class="ocena">Ocena {{item.ocena}}</h5>
+                <h5 class="rok">Rok wydania {{item.rok_wydania}}</h5>
+
+                <p class="opis">
+                    {{item.opis}}
+                </p>
+
+                <a routerLink="/ksiazka/{{item.id_ksiazki}}" class="wypozycz">
+                    <button mat-raised-button color="primary">Egzemplarze</button>
+                </a>
+                <a class="edytuj" routerLink="/edit/book/{{item.id_ksiazki}}">
+                    <button mat-raised-button color="accent" *ngIf="this.loginservice.user!=null">Edytuj</button>
+                </a>
+                
+                
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

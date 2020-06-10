@@ -1,0 +1,30 @@
+.container{
+    width:95%;
+    min-height:500px;
+    background-color:rgba(5, 5, 5, 0.7);
+    margin:auto;
+    position: relative;
+    padding-top:100px;
+}
+.cont{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+table{
+    
+}
+table th{
+    background-color:black;
+}
+table tr:nth-child(even){
+    background:rgb(85, 85, 85);
+}
+table tr:nth-child(odd){
+    background:rgb(32, 32, 32);
+}
+table tr:last-child{
+    padding-top: 5px;
+    background: inherit;
+}

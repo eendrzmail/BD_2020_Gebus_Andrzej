@@ -1,0 +1,149 @@
+<div class="container">
+    <div *ngIf="this.book!=null">
+        <div class="bookgrid">
+            <h2>Edycja książki</h2>
+            <figure *ngIf="this.book.img_url!=null" class="image">
+                <img src="{{this.book.img_url}}">
+            </figure>
+
+            
+            
+            <div class="desc">
+                <div class="egz">
+                    <h3>Dodaj egzemplarze</h3>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Ilość egzemplarzy</mat-label>
+                        <input matInput [(ngModel)]="egz_num" type="number">
+                    </mat-form-field>
+
+                    <button mat-raised-button color="primary" (click)="add_egz()">
+                        Dodaj
+                    </button>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="desc">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Tytuł</mat-label>
+                    <input matInput [(ngModel)]="this.book.tytul">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Opis</mat-label>
+                    <input matInput [(ngModel)]="this.book.opis">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>ocena</mat-label>
+                    <input matInput [(ngModel)]="this.book.ocena">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Rok wydania</mat-label>
+                    <input matInput [(ngModel)]="this.book.rok_wydania">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>IMG URL</mat-label>
+                    <input matInput [(ngModel)]="this.book.img_url">
+                </mat-form-field>
+            </div>
+            
+
+            <hr/>
+            <div class="desc">
+                <div class="wyd">
+                    <div>
+                        <h3>Wydawnictwo:</h3>
+                        <div>
+                            {{this.book.wydawnictwo.nazwa}}
+                        </div>
+                            
+                    </div>
+                    <div>
+                        <h3>Zmień wydawnictwo</h3>
+                        <mat-form-field>
+                            <mat-label>Wydawnictwo</mat-label>
+                            <mat-select>
+                              <mat-option *ngFor="let wyd of all_wydawnictwa" [value]="wyd" (click)="change_wyd(wyd)">
+                                {{wyd.nazwa}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr/>
+            <div class="desc">
+                <div class="wyd">
+                    <div>
+                        <h3>Autorzy:</h3>
+                        <div *ngFor="let autor of this.book.autorzy" style="width:100%">
+                            {{autor.imie}} {{autor.nazwisko}}
+                            <button mat-raised-button (click)="rem_aut(autor)">
+                                Usuń
+                            </button>
+                        </div>
+                            
+                    </div>
+                    <div>
+                        <h3>Dodaj Autora</h3>
+                        <mat-form-field>
+                            <mat-label>Autor</mat-label>
+                            <mat-select>
+                              <mat-option *ngFor="let autor of all_authors" [value]="autor" (click)="add_autor(autor)">
+                                {{autor.imie}} {{autor.nazwisko}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr/>
+
+            <div class="desc">
+                <div class="wyd">
+                    <div>
+                        <h3>Kategorie:</h3>
+                        <div *ngFor="let kategoria of this.book.kategorie">
+                            {{kategoria.nazwa}}
+                            <button mat-raised-button (click)="rem_kat(kategoria)">
+                                Usuń
+                            </button>
+                        </div>
+                            
+                    </div>
+                    <div>
+                        <h3>Dodaj Kategorię</h3>
+                        <mat-form-field>
+                            <mat-label>Kategoria</mat-label>
+                            <mat-select>
+                              <mat-option *ngFor="let kat of all_kategorie" [value]="kat" (click)="add_kat(kat)">
+                                {{kat.nazwa}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <hr/>
+             <div class="desc">
+                 <button mat-raised-button color="warn" (click)="send()">
+                    Zapisz zmiany
+                 </button>
+             </div>
+
+
+
+            
+
+        </div>
+    </div>
+
+
+</div>

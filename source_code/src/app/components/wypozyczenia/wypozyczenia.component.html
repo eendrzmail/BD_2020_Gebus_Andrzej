@@ -1,0 +1,131 @@
+<div class="container">
+    <div *ngIf="this.loginservice.user!=null" class="cont">
+        <div *ngIf="this.wypozyczenia==null" class="wait">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </div>
+        <div *ngIf="this.wypozyczenia!=null">
+            <table>
+                <tr>
+                    <td>
+                        Szukaj
+                    </td>
+                    <td>
+                        <input placeholder="Data RR-MMM-DD">
+                    </td>
+                </tr>
+            </table>
+              <table class='wypozyczenia'>
+                  <tr>
+                      <th>
+                          Data Wypożyczenia
+                      </th>
+                      <th>
+                          Czytelnik
+                      </th>
+                      <th>
+                          Książka
+                      </th>
+                      <th>
+                          Oddano
+                      </th>
+                  </tr>
+                  <tr *ngFor="let item of wypozyczenia" (click)='show(item)'>
+                      <td>
+                          {{item.data_wypozyczenia}}
+                      </td>
+                      <td>{{item.czytelnik.imie}} {{item.czytelnik.nazwisko}}</td>
+                      <td>{{item.egzemplarz.ksiazka.tytul}}</td>
+                      <td>{{item.oddano | oddano}}</td>
+
+                  </tr>
+              </table>
+
+        </div>
+        <div *ngIf="this.activeitem!=null" class="activeitem">
+            <table>
+                <tr>
+                    <td>
+                        <figure>
+                            <img src='{{activeitem.egzemplarz.ksiazka.img_url}}'>
+                        </figure>
+                    </td>
+                    <td>
+                        {{activeitem.egzemplarz.ksiazka.tytul}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Czytelnik:
+                    </td>
+                    <td>
+                        {{activeitem.czytelnik.imie}} {{activeitem.czytelnik.nazwisko}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Pracownik:
+                    </td>
+                    <td>
+                        {{activeitem.pracownik.imie}} {{activeitem.pracownik.nazwisko}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Data wypożyczenia:
+                    </td>
+                    <td>
+                        {{activeitem.data_wypozyczenia}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Data zwrotu:
+                    </td>
+                    <td>
+                        {{activeitem.data_zwrotu}}    
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ilość prolongacji:
+                    </td>
+                    <td>
+                        {{activeitem.ilosc_prolongacji}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Oddano:
+                    </td>
+                    <td>
+                        {{activeitem.oddano | oddano}}
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                      
+                    </td>
+                    <td>
+                         
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <button mat-flat-button color='primary' (click)="prolonguj(activeitem)" *ngIf="activeitem.ilosc_prolongacji<3 && activeitem.oddano==0">
+                            Prolonguj
+                        </button>
+                        <button mat-flat-button color='accent' (click)="oddaj(activeitem)" *ngIf="activeitem.oddano==0">
+                            Oddaj Książkę
+                        </button>
+                    </td>
+                </tr>
+            </table>
+            
+
+        </div>
+    </div>
+</div>

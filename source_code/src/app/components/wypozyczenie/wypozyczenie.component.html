@@ -1,0 +1,48 @@
+<div class="container" *ngIf="this.loginservice.user!=null">
+    <div *ngIf="this.error==true" class="error"><h2>Nieprawidłowy Czytelnik</h2></div>
+    <div *ngIf="this.error2==true" class="error"><h2>Nie udało się wypożyczyć</h2></div>
+    <div class="formularz">
+        <div *ngIf="this.egzemplarz!=null" class="ksiazka">
+            <figure>
+                <img src="{{this.egzemplarz.ksiazka.img_url}}">
+            </figure>
+            <div>
+                <h2>{{this.egzemplarz.ksiazka.tytul}}</h2>
+                Dostępny: {{this.egzemplarz.wypozyczona | available}}
+            </div>
+            
+        </div>
+
+        <div *ngIf="this.czytelnik!=null" style="display:flex;flex-direction: row;width:100%;justify-content: center;">
+            <div class="czytelnik">
+                <h2 style="width:100%">Czytelnik:</h2>
+
+                <mat-form-field>
+                        <mat-label>Czytelnik</mat-label>
+                    <input type="text" matInput [matAutocomplete]="auto" [(ngModel)]="czytelnik" (keyup)="czyt()" placeholder="Czytelnik">
+                </mat-form-field>
+                
+    
+                  
+                  <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of this.czytinput" [value]="option.id_czytelnika" (click)="czyt()">{{option.imie}} {{option.nazwisko}}</mat-option>
+                  </mat-autocomplete>
+            </div>
+            <div *ngIf="this.czytelnikout!=null">
+                <pre>
+                    Imię:{{this.czytelnikout.imie}}
+                    Nazwisko:{{this.czytelnikout.nazwisko}}
+                    Telefon:{{this.czytelnikout.telefon}}
+                    Email:{{this.czytelnikout.email}}
+                </pre>
+                
+            </div>
+            
+
+        </div>
+        
+    </div>
+    
+    <button mat-flat-button (click)="wyslij()">Wypożycz</button>
+
+</div>

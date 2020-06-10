@@ -1,0 +1,54 @@
+.container{
+    width:95%;
+    min-height:500px;
+    background-color:rgba(5, 5, 5, 0.7);
+    margin:auto;
+    position: relative;
+    padding:10px;
+}
+.cont{
+    display:flex;
+    flex-direction: row;
+}
+.wypozyczenia{
+    border:1px solid rgb(41, 30, 9);
+    border-collapse: collapse;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+.wypozyczenia tr{
+    padding-top:3px;
+    padding-bottom:3px;
+    cursor:pointer;
+
+}
+.wypozyczenia tr:hover{
+    box-shadow:0px 0px 10px red;
+}
+.wypozyczenia tr:nth-child(odd){
+    background-color:rgb(41, 41, 41);
+}
+
+
+
+.activeitem{
+    padding:15px;
+    font-family: 'Roboto';
+
+}
+.activeitem img{
+    max-width: 100px;
+}
+.activeitem button{
+    display:inline-block;
+    min-width: 110px;
+    padding:10px;
+}
+
+.wait{
+    width:100%;
+    font-size: 5rem;
+    text-align: center;
+}
+
+

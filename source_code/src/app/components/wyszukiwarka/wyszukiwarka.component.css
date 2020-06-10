@@ -1,0 +1,106 @@
+.container{
+    width:95%;
+    min-height:500px;
+    background-color:rgba(5, 5, 5, 0.7);
+    margin:auto;
+    position: relative;
+}
+
+.searchcontainer{
+    position: relative;
+    width:100%;
+    padding-top:15px;
+}
+.searchcontainer button,input{
+    font-size: 20px;
+    padding:4px;
+    background-color:wheat;
+    border: 2px solid black;
+}
+.searchcontainer button{
+    border-radius: 0 1rem 1rem 0;
+    border-left: none;
+    padding-left:10px;
+    padding-right: 10px;
+    background-color: rgb(204, 185, 149);
+}
+.searchcontainer input{
+    border-right:none;
+    width:60%;
+    border-radius: 1rem 0 0 1rem;
+}
+
+
+.searchresults{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.bookgrid{
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    width:100%;
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+     "img tytul tytul ocena rok"
+     "img autor autor wydawnictwo przycisk1"
+     "img opis opis opis przycisk2";
+     border:1px solid black;
+     cursor: default;
+}
+.bookgrid:hover{
+    box-shadow: 0px 0px 10px white;
+}
+.bookgrid button{
+    margin:5px;
+}
+.image{
+    grid-area: img;
+}
+.image img{
+    max-width: 150px;
+}
+.tytul{
+    grid-area: tytul;
+}
+.autorzy{
+    grid-area: autor;
+    text-align: left;
+}
+.autorzy a{
+    text-decoration: none;
+    color: green;
+}
+.wyd{
+    grid-area:wydawnictwo;
+}
+.ocena{
+    grid-area: ocena;
+}
+.rok{
+    grid-area:rok ;
+}
+.opis{
+    grid-area:opis;
+    text-align: left;
+}
+.wypozycz{
+    grid-area: przycisk1;
+}
+.edytuj{
+    grid-area: przycisk2;
+}
+
+.bookgrid button{
+    width:90%;
+    height:90%;
+}
+
+
+
+
+
+

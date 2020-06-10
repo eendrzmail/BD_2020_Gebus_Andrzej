@@ -1,0 +1,24 @@
+<div class="container">
+    <div *ngIf="this.error==true" style="color:white;background-color:red;height:30px;">
+        Błąd danych
+    </div>
+    <div *ngIf="this.loginservice.user!=null" class="cont">
+        <table>
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Nazwa wydawnictwa</mat-label>
+                        <input matInput [(ngModel)]="nazwa">
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button mat-raised-button (click)="send()">Dodaj</button>
+                </td>
+            </tr>
+        </table>
+
+            
+    </div>
+</div>

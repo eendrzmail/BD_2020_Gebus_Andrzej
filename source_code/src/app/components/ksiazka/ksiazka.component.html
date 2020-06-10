@@ -1,0 +1,42 @@
+<div class="container">
+    <div *ngIf="this.book!=null">
+        <div class="bookgrid">
+            <figure *ngIf="this.book.img_url!=null" class="image">
+                <img src="{{this.book.img_url}}">
+            </figure>
+            <h2 class="tytul">{{this.book.tytul}}</h2>
+
+                <div class="autorzy">
+                    <a *ngFor="let autor of this.book.autorzy">
+                        {{autor.imie}} {{autor.nazwisko}}
+                    </a>    
+                </div>
+
+                <h5 class="wyd">Wydawnictwo: {{this.book.wydawnictwo.nazwa}}</h5>
+                <h5 class="ocena">Ocena {{this.book.ocena}}</h5>
+                <h5 class="rok">Rok wydania {{this.book.rok_wydania}}</h5>
+
+                <p class="opis">
+                    {{this.book.opis}}
+                </p>
+
+                <a class="edytuj" routerLink="/edit/book/{{this.book.id_ksiazki}}">
+                    <button mat-raised-button color="accent" *ngIf="this.loginservice.user!=null">Edytuj</button>
+                </a>
+        </div>
+    </div>
+    
+    <h2 style="text-align: left;">Dostępne egzemplarze:</h2>
+    <div class="egzemplarze">
+        <div class="" *ngFor="let item of this.egzemplarze" class="egzitem">
+            <img src="{{item.ksiazka.img_url}}" class="tinyimg">
+            <div style="display:flex;justify-content: center;align-items: center;">
+                Dostępny: {{item.wypozyczona | available}}
+            </div>
+            <a routerLink="/wypozycz/{{item.id_egzemplarza}}" *ngIf="item.wypozyczona==0 && this.loginservice.user!=null">
+                <button mat-raised-button color="primary">Wypożycz</button>
+            </a>
+        </div>
+    </div>
+
+</div>

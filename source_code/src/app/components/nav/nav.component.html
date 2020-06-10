@@ -1,0 +1,56 @@
+<nav>
+    <ul>
+        <li *ngIf="this.loginservice.user==null">
+            <a routerLink="/login">
+                <i class="fas fa-user"></i>
+                <span>Login</span>
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a routerLink="/szukaj">
+                <i class="fas fa-search"></i>
+                <span>Szukaj</span>
+            </a>
+        </li>
+        <li *ngIf="this.loginservice.user!=null">
+            <a routerLink="/wypozyczenia">
+                <i class="fas fa-book-reader"></i>
+                <span>Wypozyczenia</span>
+            </a>
+        </li>
+        <li *ngIf="this.loginservice.user!=null">
+            <a routerLink="/dodaj">
+                <i class="fas fa-plus"></i>
+                <span>Dodaj</span>
+            </a>
+        </li>
+        <!--
+        <li>
+            <a routerLink="">
+                <i class="fas fa-edit"></i>
+                <span>Modyfikuj</span>
+            </a>
+        </li>
+        -->
+        <ng-container *ngIf="this.loginservice.user!=null">
+            <li *ngIf="this.loginservice.user.login=='root'">
+                <a routerLink="pracownicy">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Pracownicy</span>
+                </a>
+            </li>
+        </ng-container>
+        
+        
+        <li *ngIf="this.loginservice.user!=null">
+            <a (click)="wyloguj()" routerLink=''>
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Wyloguj</span>
+            </a>
+        </li>
+    </ul>
+    
+</nav>

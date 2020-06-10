@@ -1,0 +1,30 @@
+.container{
+    width:95%;
+    min-height:500px;
+    background-color:rgba(5, 5, 5, 0.7);
+    margin:auto;
+    position: relative;
+    padding-top:100px;
+    color:black;
+    font-family: 'Roboto';
+
+}
+.cont{
+    display:flex;
+    justify-content: center;
+    
+}
+.cont table{
+    padding:30px;
+    background-color:rgba(245, 222, 179, 0.822);
+    border-radius: 10px;
+}
+
+.wydawnictwa a{
+    font-weight: lighter;
+    font-style: italic;
+}
+.wydawnictwa a:hover{
+    background-color:red;
+    cursor:pointer;
+}

@@ -1,0 +1,98 @@
+.container{
+    width:95%;
+    min-height:500px;
+    background-color:rgba(5, 5, 5, 0.7);
+    margin:auto;
+    position: relative;
+    padding:10px;
+}
+
+.bookgrid{
+    font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+    width:100%;
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+     "img tytul tytul ocena rok"
+     "img autor autor wydawnictwo przycisk1"
+     "img opis opis opis przycisk2";
+     border:1px solid black;
+     cursor: default;
+}
+.bookgrid button{
+    margin:5px;
+}
+.image{
+    grid-area: img;
+}
+.image img{
+    max-width: 150px;
+}
+.tytul{
+    grid-area: tytul;
+}
+.autorzy{
+    grid-area: autor;
+    text-align: left;
+}
+.autorzy a{
+    text-decoration: none;
+    color: green;
+}
+.wyd{
+    grid-area:wydawnictwo;
+}
+.ocena{
+    grid-area: ocena;
+}
+.rok{
+    grid-area:rok ;
+}
+.opis{
+    grid-area:opis;
+    text-align: left;
+}
+.edytuj{
+    grid-area: przycisk2;
+}
+
+
+.egzemplarze{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+.egzitem{
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom:5px;
+    text-align: center;
+}
+.egzitem:hover{
+    box-shadow: 0px 0px 10px wheat;
+}
+.tinyimg{
+    width:90px;
+}
+.egzitem a {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+}
+.egzitem button{
+    height:90%;
+    width:70%;
+}
+
+
+
+
+
+
+
+
+

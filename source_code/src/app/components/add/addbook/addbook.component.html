@@ -1,0 +1,73 @@
+<div class="container">
+    <div *ngIf="this.error==true" style="color:white;background-color:red;height:30px;">
+        Błąd danych
+    </div>
+    <div *ngIf="this.loginservice.user!=null" class="cont">
+        
+        <table>
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Tytul</mat-label>
+                        <input matInput [(ngModel)]="tytul">
+                    </mat-form-field>
+                </td>
+
+                
+
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Ocena [0-100]</mat-label>
+                        <input matInput [(ngModel)]="ocena" type='number' >
+                    </mat-form-field>
+                </td>
+                <td rowspan="3" class="wydawnictwa"> 
+                    Wydawnictwo:<br/> <span *ngIf="wydawnictwo!=null">{{wydawnictwo.nazwa}}</span>
+                    <div style="border:1px solid black;display:flex;flex-direction: column;">
+                        <a *ngFor="let item of wydawnictwa" (click)="selectwyd(item)">{{item.nazwa}}</a>
+                    </div>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Opis</mat-label>
+                        <input matInput [(ngModel)]="opis">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Rok wydania</mat-label>
+                        <input matInput [(ngModel)]="rok_wydania" type='number'>
+                    </mat-form-field>
+                </td>
+                
+            </tr>
+            <tr>
+                <td colspan='2'>
+                    <mat-form-field class="example-full-width">
+                        <mat-label>img_url</mat-label>
+                        <input matInput [(ngModel)]="img_url" >
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='3'>
+                    <button mat-raised-button (click)="send()">
+                        Dodaj
+                    </button>
+                </td>
+            </tr>
+            
+ 
+                
+            
+            
+                
+            
+        </table>
+
+            
+    </div>
+</div>
