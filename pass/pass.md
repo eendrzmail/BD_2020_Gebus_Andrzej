@@ -1,20 +1,20 @@
 ## Maszyna wirtualna:
-login: student \n
-hasło: student
+login: student  
+hasło: student  
 
 ## Baza danych:
-login: student \n
-hasło: student
+login: student  
+hasło: student  
 
 ## Aplikacja:
-login: root \n
-hasło: root
-\n
-login: jaki \n
-hasło: 123
-\n
-login: maik \n
-hasło: 321
+login: root  
+hasło: root  
+
+login: jaki  
+hasło: 123  
+
+login: maik  
+hasło: 321  
 
 
 
