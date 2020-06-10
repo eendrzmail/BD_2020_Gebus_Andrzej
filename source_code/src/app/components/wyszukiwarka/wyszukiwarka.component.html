@@ -27,6 +27,13 @@
                 <h5 class="ocena">Ocena {{item.ocena}}</h5>
                 <h5 class="rok">Rok wydania {{item.rok_wydania}}</h5>
 
+                <div class="kategorie">
+                    <h5>Kategorie:</h5>
+                    <a *ngFor="let kat of item.kategorie">
+                        {{kat.nazwa}}
+                    </a>
+                </div>
+
                 <p class="opis">
                     {{item.opis}}
                 </p>

@@ -16,6 +16,13 @@
                 <h5 class="ocena">Ocena {{this.book.ocena}}</h5>
                 <h5 class="rok">Rok wydania {{this.book.rok_wydania}}</h5>
 
+                <div class="kategorie">
+                    <h5>Kategorie:</h5>
+                    <a *ngFor="let kat of this.book.kategorie">
+                        {{kat.nazwa}}
+                    </a>
+                </div>
+
                 <p class="opis">
                     {{this.book.opis}}
                 </p>

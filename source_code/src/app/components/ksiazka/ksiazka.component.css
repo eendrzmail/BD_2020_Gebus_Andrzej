@@ -16,7 +16,7 @@
     grid-template-areas: 
      "img tytul tytul ocena rok"
      "img autor autor wydawnictwo przycisk1"
-     "img opis opis opis przycisk2";
+     "img opis opis kategorie przycisk2";
      border:1px solid black;
      cursor: default;
 }
@@ -52,9 +52,18 @@
 .opis{
     grid-area:opis;
     text-align: left;
+    word-wrap: break-word;
 }
 .edytuj{
     grid-area: przycisk2;
+}
+.kategorie{
+    grid-area:kategorie;
+    display: flex;
+    flex-direction: column;
+}
+.kategorie h5{
+    margin:0;
 }
 
 
