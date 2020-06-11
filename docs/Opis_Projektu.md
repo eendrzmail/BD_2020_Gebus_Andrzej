@@ -1,3 +1,5 @@
+## Dokumentacja projektu w pliku dokumentacja.docx
+
 Projekt ma na celu utworzenie aplikacji do obsługi biblioteki.
 
 Plik erd.jpeg przedstawia diagram erd bazy danych, którą zamierzam utworzyć.
@@ -5,7 +7,7 @@ Plik erd.jpeg przedstawia diagram erd bazy danych, którą zamierzam utworzyć.
 Projekt zamierzam stworzyć korzystając z:
 - Angular (frontend)
 - PHP (backend php łączące się z oracledb i wystawiające dane na zewnątrz w formie prostego rest API)
-- OracleDB (postawione w kontenerze wirtualnym dockera)
+- OracleDB 
 
 ### Założenia bazy danych:
 
