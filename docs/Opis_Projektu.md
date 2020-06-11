@@ -23,7 +23,7 @@ Wypożyczenia:
     - czytelnik
     - obsługujący pracownik
     - data wypożyczenia
-  - Pracownik filii może na życzenie klienta prolongować daną książkę po jej wypożyczeniu na kolejne 14dni
+  - Pracownik filii może na życzenie klienta prolongować daną książkę po jej wypożyczeniu na kolejne 7dni
   
 Pracownicy:
   - każdy pracownik ma login oraz hasło którym loguje się do systemu. Po zalogowaniu może dodawać oraz edytować wypozyczenia
