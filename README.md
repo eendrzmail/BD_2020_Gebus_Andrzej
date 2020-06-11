@@ -1,7 +1,8 @@
 # BD_2020_Gebus_Andrzej
 Projekt Na Bazy Danych 
 
-## Opis Projektu znajduje się w katalogu docs 
+## Opis Projektu znajduje się w katalogu docs
+Linki do filmu,maszyny oraz aplikacji umieszczone są w pliku /docs/links.md
 
 ## Opis folderów:
 - gui - zawiera skompilowaną wersję strony oraz skrypty php. Wystarczy wrzucić do folderu htdocs
